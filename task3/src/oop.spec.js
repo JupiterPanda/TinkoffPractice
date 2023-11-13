@@ -24,6 +24,17 @@ describe('ООП', () => {
             assert.strictEqual(point.x, 1);
             assert.strictEqual(point.y, 0);
         });
+
+        it('Проверка метода toCenter()', () => {
+            const point = new core.Point(0, 1);
+            assert.strictEqual(point.toCenter(), 1);
+
+            const point1 = new core.Point(2);
+            assert.strictEqual(point1.toCenter(), 2);
+
+            const point2 = new core.Point(2,2);
+            assert.strictEqual(point2.toCenter(), 8**(0.5));
+        });
     });
 
     describe('#Point3D', () => {
@@ -56,22 +67,31 @@ describe('ООП', () => {
     });
 
     describe('#Queue', () => {
-        it('проверка массивом', () => {
-            const queue = new core.Queue();
-            // TODO:
-            assert.strictEqual(true, true);
-        });
-
-        it('проверка на пограничные случаи', () => {
-            const queue = new core.Queue();
-            // TODO:
-            assert.strictEqual(true, true);
-        });
-
-        it('может создаться из массива', () => {
+        it('Может создаться из массива', () => {
             const queue = new core.Queue([1,2,3,5]);
-            // TODO:
-            assert.strictEqual(true, true);
+            assert.deepEqual(queue.array, [1,2,3,5]);
+        });
+        it('Может создаться без параметров', () => {
+            const queue = new core.Queue();
+            assert.deepEqual(queue.array, []);
+        });
+
+        it('Проверка массивом', () => {
+            const queue = new core.Queue([1,2]);
+            queue.push_back(3);
+            assert.deepEqual(queue.array, [1,2,3]);
+            assert.deepEqual(queue.pop_left(), 1);
+        });
+
+        it('Проверка на пограничные случаи', () => {
+            const queue = new core.Queue([]);
+            queue.push_back(2)
+            assert.deepEqual(queue.array, [2]);
+            assert.deepEqual(queue.pop_left(), 2);
+            queue.pop_left()
+            assert.deepEqual(queue.array, []);
+            queue.push_back(1)
+            assert.deepEqual(queue.array, [1]);
         });
     });
 });
