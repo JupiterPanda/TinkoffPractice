@@ -1,8 +1,0 @@
-dist
-node_modules
-.gitignore
-.prettierignore
-yarn.lock
-package-lock.json
-.husky
-assets
