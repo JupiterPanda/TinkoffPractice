@@ -1,6 +1,5 @@
 .footer {
   padding: 20px 0 24px 0;
-  border-top: 1px solid #e7e8ea;
 }
 
 .copyright {
@@ -8,13 +7,11 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 20px;
+  margin-top: 20px;
+  margin-bottom: 24px;
   color: var(--text-02);
 }
 
-.contact {
-  display: flex;
-  justify-content: flex-end;
-}
 
 .contact__address {
   font-family: var(--text-font);
@@ -23,6 +20,15 @@
   font-size: 13px;
   line-height: 20px;
   color: var(--text-02);
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -20px;
+}
+
+.line{
+  margin-top: 110px;
+  width:100%;
+  border-top:1px solid rgba(188, 188, 188, 0.4);
 }
 
 /* если открыто на мобилках то переписываем некоторые стили */
