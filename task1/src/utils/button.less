@@ -1,7 +1,14 @@
 .button {
   display: flex;
+  text-align: center;
   align-items: center;
-  justify-content: center;
+  align-content: center;
+  margin-left: 409.278px;
+  margin-right: 409.278px;
+  margin-top: 40px;
+  margin-bottom: 64px;
+  display: block;
+  justify-content: space-between;
   padding: 16px 36px;
   background: none;
   border: none;
@@ -11,4 +18,17 @@
   outline: inherit;
   background-color: var(--primary);
   border-radius: var(--radius-s);
+  
+  &:hover {
+    background-color: #FCC521;
+  }
+  
+  &:active {
+    background-color: #FAB619;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(112, 117, 74, 0.774);
+  }
+  
 }
