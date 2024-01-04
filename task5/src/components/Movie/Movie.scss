@@ -1,0 +1,43 @@
+.movie {
+	padding: 12px;
+	margin: 2px;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+	&_selected {
+		border: 1px solid #666;
+	}
+
+	@media screen and (hover: hover) {
+		&:hover {
+			cursor: pointer;
+			transition: background-color;
+			transition-duration: 300;
+			transition-timing-function: ease-in-out;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.16);
+			background-color: #ebf4ff;
+		}
+	}
+
+	h2 {
+		font-size: 12px;
+		font-weight: 400;
+		margin-bottom: 4px;
+	}
+
+	.info {
+		display: flex;
+		font-size: 11px;
+		color: #6c6c6c;
+
+		p {
+			padding-right: 6px;
+			border-right: 1px solid #6c6c6c;
+		}
+
+		span {
+			margin-left: 6px;
+		}
+	}
+}

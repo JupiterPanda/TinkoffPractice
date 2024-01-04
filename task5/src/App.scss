@@ -1,0 +1,41 @@
+:root {
+	--shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+	--yellow-color: #ffdd2d;
+	--yellow-hover-color: #ffcd33;
+	--yellow-active-color: #fab619;
+	--blue-color: #ecf1f7;
+}
+
+.button {
+	background-color: var(--yellow-color);
+	padding: 12px;
+	border-radius: 8px;
+	transition: background-color 300ms ease-in-out;
+	cursor: pointer;
+
+	@media screen and (hover: hover) {
+		&:hover {
+			background-color: var(--yellow-hover-color);
+		}
+	}
+
+	&:active {
+		background-color: var(--yellow-active-color);
+	}
+}
+
+.container {
+	width: 1260px;
+	margin: 0 auto;
+}
+
+.flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.main {
+	display: flex;
+	height: calc(100vh - 64px);
+}
