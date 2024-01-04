@@ -1,0 +1,14 @@
+.control {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+
+	.input {
+		padding: 12px;
+		border-radius: 8px;
+		min-width: 325px;
+		background-color: var(--blue-color);
+		box-shadow: inset 0 2px 4px 0 rgb(0, 0, 0, 0.05);
+	}
+}

@@ -1,0 +1,8 @@
+.movie-list {
+	height: 0;
+	flex-grow: 1;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}

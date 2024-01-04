@@ -1,0 +1,15 @@
+.movie-field {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+
+	p {
+		min-width: 200px;
+		color: #6c6c6c;
+	}
+
+	p:last-child {
+		color: black;
+	}
+}
