@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>DOM practice</title>
+	<link rel="stylesheet" href="./styles.css" />
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+	<nav class="py-4 shadow">
+		<div class="container flex items-center justify-between mx-auto">
+			<h2 class="text-xl font-bold ml-1">Терин Иван 6407</h2>
+			<button id="setup"
+					class="py-2 mr-1 px-4 rounded-lg transition bg-yellow-300 hover:bg-yellow-400 active:bg-yellow-500 outline-none focus-visible:ring">
+				Начальные значения
+			</button>
+		</div>
+	</nav>
+	<div class="container mx-auto my-12 grid items-start grid-cols-1 lg:grid-cols-3 gap-14 relative">
+		<form name="create"
+			  class="p-4 static lg:sticky top-12 left-12 border border-gray-100 shadow-md rounded-xl">
+			<h2 class="text-lg">Форма для добавления новой книги</h2>
+			<div class="bg-blue-100/60 transition hover:bg-blue-100/70 rounded-xl mt-4 focus-within:ring focus-within:bg-blue-100/80">
+				<input type="text"
+					   name="title"
+					   class="bg-transparent w-full py-3 px-4 outline-none"
+					   placeholder="Введите название книги"
+					   required />
+			</div>
+			<div class="bg-blue-100/60 transition hover:bg-blue-100/70 rounded-xl mt-4 focus-within:ring focus-within:bg-blue-100/80">
+				<input type="text"
+					   name="author"
+					   class="bg-transparent w-full py-3 px-4 outline-none"
+					   placeholder="Укажите автора"
+					   required />
+			</div>
+			<div class="bg-blue-100/60 transition hover:bg-blue-100/70 rounded-xl mt-4 focus-within:ring focus-within:bg-blue-100/80">
+				<input type="url"
+					   name="thumbnail"
+					   class="bg-transparent w-full py-3 px-4 outline-none"
+					   placeholder="Укажите ссылку на изображение"
+					   required />
+			</div>
+			<div class="bg-blue-100/60 transition hover:bg-blue-100/70 rounded-xl mt-4 focus-within:ring focus-within:bg-blue-100/80">
+				<textarea class="bg-transparent w-full h-full py-3 px-4 outline-none"
+						  name="description"
+						  minlength="12"
+						  placeholder="Добавьте краткое описание"
+						  required></textarea>
+			</div>
+			<button type="submit"
+					data-submit-button
+					class="w-full mt-4 py-2 px-4 rounded-lg transition bg-yellow-300 hover:bg-yellow-400 active:bg-yellow-500 outline-none focus-visible:ring">
+				Добавить
+			</button>
+		</form>
+		<div id="root" class="col-span-2 flex flex-col gap-4"></div>
+	</div>
+	<script defer type="module" src="./main.js"></script>
+</body>
+</html>
